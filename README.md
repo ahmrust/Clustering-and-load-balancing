@@ -89,8 +89,6 @@ backend web_servers    # секция бэкенд
         server s1 127.0.0.1:8888 check
         server s2 127.0.0.1:9999 check
 
-....
-
 ```
 
 ![alt text](https://github.com/ahmrust/Clustering-and-load-balancing/blob/main/img/1.png)
@@ -108,7 +106,6 @@ HAproxy должен балансировать только тот http-тра�
 Решение 2
 
 ```
-Поле для вставки кода...
 global
 	log /dev/log	local0
 	log /dev/log	local1 notice
@@ -176,7 +173,7 @@ listen web_tcp
 	server s1 127.0.0.1:8888 check inter 3s
 	server s2 127.0.0.1:9999 check inter 3s
 	server s3 127.0.0.1:7777 check inter 3s
-....
+
 ```
 
 ![alt text](https://github.com/ahmrust/Clustering-and-load-balancing/blob/main/img/3.png)
